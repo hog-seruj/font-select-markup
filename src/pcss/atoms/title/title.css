@@ -1,0 +1,19 @@
+@import "_a-title.css";
+
+.a-title {
+  @extend %a-title;
+
+  &--size {
+    &--large {
+      @extend %a-title--size--large;
+    }
+
+    &--big {
+      @extend %a-title--size--big;
+    }
+
+    &--normal {
+      @extend %a-title--size--normal;
+    }
+  }
+}
