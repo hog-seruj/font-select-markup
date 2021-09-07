@@ -1,0 +1,5 @@
+%l-main {
+  padding: 0.9375rem; /* 15px */
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+}

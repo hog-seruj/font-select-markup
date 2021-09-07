@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const nodeEnv = process.env.NODE_ENV || 'development'
 const devMode = nodeEnv !== 'production';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: nodeEnv,
@@ -42,11 +43,30 @@ module.exports = {
             name: '[path][name].[ext]'
         }
       },
+      {
+        test: /\.twig$/,
+        use: [
+          'twig-loader',
+          {
+            loader: 'twig-html-loader',
+            options: {
+              namespaces: {
+                'components': 'src/pcss',
+              }
+            }
+          }
+        ]
+      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html.twig',
+      minify: false
     }),
   ],
 }

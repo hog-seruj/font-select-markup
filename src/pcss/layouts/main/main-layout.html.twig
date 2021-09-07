@@ -1,0 +1,22 @@
+<div class="l-main">
+  {% if block('top_left') is defined or block('top_right') is defined %}
+    <div class="l-main__top">
+      <div class="l-main__top__left">
+        {% block top_left %}{% endblock %}
+      </div>
+      <div class="l-main__top__right">
+        {% block top_right %}{% endblock %}
+      </div>
+    </div>
+  {% endif %}
+  {% if block('content_left') is defined or block('content_right') is defined %}
+    <div class="l-main__content">
+      <div class="l-main__content__left">
+        {% block content_left %}{% endblock %}
+      </div>
+      <div class="l-main__content__right">
+        {% block content_right %}{% endblock %}
+      </div>
+    </div>
+  {% endif %}
+</div>

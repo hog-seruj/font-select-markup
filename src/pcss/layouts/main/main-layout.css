@@ -1,0 +1,5 @@
+@import "_l-main.css";
+
+.l-main {
+  @extend %l-main;
+}

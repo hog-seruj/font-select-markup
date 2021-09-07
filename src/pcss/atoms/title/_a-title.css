@@ -17,6 +17,6 @@
   }
 
   &--light {
-    color: white;
+    color: var(--light-color);
   }
 }
