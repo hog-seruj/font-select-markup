@@ -16,4 +16,8 @@
       @extend %a-title--size--normal;
     }
   }
+
+  &--mobile-center {
+    @extend %a-title--mobile-center;
+  }
 }

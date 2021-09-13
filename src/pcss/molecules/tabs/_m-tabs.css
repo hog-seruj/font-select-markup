@@ -1,0 +1,7 @@
+%m-tabs {
+  &__content {
+    &--hidden {
+      display: none;
+    }
+  }
+}

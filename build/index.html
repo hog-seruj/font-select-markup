@@ -6,14 +6,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Title</title>
-</head>
+<link href="main.css" rel="stylesheet"></head>
   <body>
-  {% embed "@components/layouts/main/main-layout.html.twig" %}
-    {% block top_left %}
-        {% include '@components/atoms/title/title.html.twig' with { 'text': 'Please select one font', 'modifierClass': 'a-title--mobile-center'} %}
-    {% endblock %}
-    {% block top_right %}
-        <nav class="m-main-menu">
+  <div class="l-main">
+      <div class="l-main__top">
+      <div class="l-main__top__left">
+                <h1 class="a-title a-title--mobile-center">Please select one font</h1>
+          </div>
+      <div class="l-main__top__right">
+                <nav class="m-main-menu">
           <ul class="m-tabs m-main-menu__list" role="tablist" aria-label="Entertainment">
             <li class="m-main-menu__item">
               <button role="tab" aria-selected="true" aria-controls="my-foonts-panel" id="my-fonts-tab" tabindex="0" class="m-tabs__button item m-main-menu__link">My fonts</button>
@@ -23,9 +24,10 @@
             </li>
           </ul>
         </nav>
-    {% endblock %}
-    {% block content %}
-      <div class="m-tabs__content o-grid o-grid--two-columns" role="tabpanel" tabindex="0" aria-labelledby="my-fonts-tab" id="my-foonts-panel">
+          </div>
+    </div>
+        <div class="l-main__content">
+            <div class="m-tabs__content o-grid o-grid--two-columns" role="tabpanel" tabindex="0" aria-labelledby="my-fonts-tab" id="my-foonts-panel">
         <div class="o-grid__item">
           <label class="m-card">
             <input type="radio" name="m-card" class="m-card__input">
@@ -69,7 +71,7 @@
           <p>Donec eros morbi quo do. Minus ornare nisi distinctio nihil adipisicing, consectetur, adipiscing urna eius beatae ab, erat, blandit nisi.</p>
         </div>
       </div>
-    {% endblock %}
-  {% endembed %}
-  </body>
+        </div>
+  </div>
+  <script src="main.js"></script></body>
 </html>

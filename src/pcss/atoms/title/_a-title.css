@@ -19,4 +19,10 @@
   &--light {
     color: var(--light-color);
   }
+
+  &--mobile-center {
+    @media (--mobile) {
+      text-align: center;
+    }
+  }
 }

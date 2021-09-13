@@ -2,4 +2,16 @@
 
 .l-main {
   @extend %l-main;
+
+  &__top {
+    @extend %l-main__top;
+
+    &__right {
+      @extend %l-main__top__right;
+    }
+  }
+
+  &__content {
+    @extend %l-main__content;
+  }
 }

@@ -1,0 +1,17 @@
+@import '_o-grid.css';
+
+.o-grid {
+  @extend %o-grid;
+
+  &--two-columns {
+    @extend %o-grid--two-columns;
+  }
+
+  &--centered {
+    @extend %o-grid--centered;
+  }
+
+  &__item {
+    @extend %o-grid__item;
+  }
+}

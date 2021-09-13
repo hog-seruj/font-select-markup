@@ -3,18 +3,17 @@ module.exports = ({ env }) => ({
     'postcss-import': {},
     'postcss-url': {},
     'postcss-mixins': {},
-    'postcss-advanced-variables': {},
-    'postcss-extend-rule': {},
-    'postcss-atroot': {},
+    'postcss-custom-media': {},
+    'postcss-nested': {},
+    'postcss-extend': {},
     'postcss-preset-env': {
       browsers: [
         '>0.5%',
       ],
-      cascade: false,
+      cascade: true,
     },
     'postcss-property-lookup': {},
-    'postcss-nested': {},
+    'postcss-discard-empty': {},
     'cssnano': env === 'production' ? {} : false,
   },
 });
-  

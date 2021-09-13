@@ -1,0 +1,75 @@
+@import "_m-card.css";
+
+.m-card {
+  @extend %m-card;
+
+  &__input {
+    @extend %m-card__input;
+  }
+
+  &__content {
+    @extend %m-card__content;
+
+    &--secondary {
+      @extend %m-card__content--secondary;
+    }
+  }
+
+  &__input:checked + &__content {
+    @extend %m-card__content--active;
+  }
+
+  &__thumb {
+    @extend %m-card__thumb;
+
+    &--secondary {
+      @extend %m-card__thumb--secondary;
+    }
+
+    &--pink {
+      @extend %m-card__thumb--pink;
+    }
+
+    &--blue {
+      @extend %m-card__thumb--blue;
+    }
+
+    &__icon {
+      @extend %m-card__thumb__icon;
+
+      &--secondary {
+        @extend %m-card__thumb__icon--secondary;
+      }
+    }
+  }
+
+  &__description {
+    @extend %m-card__description;
+
+    &--secondary {
+      @extend %m-card__description--secondary;
+    }
+  }
+
+  &__text {
+    @extend %m-card__text;
+  }
+
+  &--secondary {
+    .m-card__thumb {
+      @extend %m-card__thumb--secondary;
+    }
+
+    .m-card__thumb__icon {
+      @extend %m-card__thumb__icon--secondary;
+    }
+
+    .m-card__content {
+      @extend %m-card__content--secondary;
+    }
+
+    .m-card__description {
+      @extend %m-card__description--secondary;
+    }
+  }
+}

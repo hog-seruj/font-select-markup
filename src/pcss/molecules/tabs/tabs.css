@@ -1,0 +1,9 @@
+@import '_m-tabs.css';
+
+.m-tabs {
+  &__content {
+    &[hidden="true"] {
+      @extend %m-tabs__content--hidden;
+    }
+  }
+}

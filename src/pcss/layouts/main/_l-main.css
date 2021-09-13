@@ -2,4 +2,28 @@
   padding: 0.9375rem; /* 15px */
   max-width: var(--site-max-width);
   margin: 0 auto;
+
+  &__top {
+    display: grid;
+    align-items: center;
+    grid-gap: 0.625rem; /* 10px */
+    padding:  0 0.9375rem 0.9375rem; /* 0 15px 15px */
+
+    @media (--tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__right {
+      @media (--tablet) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__content {
+    padding: 2.5rem; /* 40px */
+    border: 2px solid var(--gray--color);
+    border-radius: 0.625rem; /* 10px */
+  }
 }

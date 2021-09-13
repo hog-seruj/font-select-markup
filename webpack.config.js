@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: nodeEnv,
-  entry: './src/pcss/main.pcss',
+  entry: ['./src/pcss/main.pcss', './src/main.js'],
   output: {
     path: __dirname + '/build',
   },
@@ -31,8 +31,18 @@ module.exports = {
         test: /\.(pcss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { sourceMap: devMode } },
-          { loader: 'postcss-loader', options: { sourceMap: devMode } },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: devMode
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: devMode
+            }
+          },
         ],
       },
       {
@@ -56,6 +66,16 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
     ],
   },

@@ -9,14 +9,9 @@
       </div>
     </div>
   {% endif %}
-  {% if block('content_left') is defined or block('content_right') is defined %}
+  {% if block('content') is defined %}
     <div class="l-main__content">
-      <div class="l-main__content__left">
-        {% block content_left %}{% endblock %}
-      </div>
-      <div class="l-main__content__right">
-        {% block content_right %}{% endblock %}
-      </div>
+      {% block content %}{% endblock %}
     </div>
   {% endif %}
 </div>

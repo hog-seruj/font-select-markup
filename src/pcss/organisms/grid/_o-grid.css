@@ -1,0 +1,22 @@
+%o-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+
+  &--two-columns {
+    @media (--tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--centered {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__item {
+    display: grid;
+    grid-gap: 1rem;
+  }
+}
